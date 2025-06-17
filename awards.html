@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="student.css">
+    <title>SGGS Awards</title>
+</head>
+<body>
+    <nav class="navbar">
+      <div class="nav-box">
+        <div class="nav-links">
+            <a href="student.html"><span class="label">Home</span></a>
+            <a href="bulletin.php"><span class="label">Bulletin</span></a>
+            <a href="events.php"><span class="label">Events</span></a>
+            <a href="awards.html"><span class="label">Awards</span></a>
+            <a href="index.html"><span class="label">Log Out</span></a>
+        </div>
+      </div>
+    </nav>
+
+  <!-- Hero Section -->
+  <section class="awards-hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">SGGS Awards Gallery</h1>
+      <p class="hero-subtitle">Celebrating Excellence and Achievement</p>
+      <div class="award-count">42 Awards This Year</div>
+    </div>
+  </section>
+
+  <!-- Awards Section -->
+  <section class="awards-section" id="awards">
+    <h2 class="section-title">Our Recent Achievements</h2>
+    
+    <div class="filter-controls">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="academic">Academic</button>
+      <button class="filter-btn" data-filter="sports">Sports</button>
+      <button class="filter-btn" data-filter="arts">Arts</button>
+    </div>
+    
+    <div class="awards-grid">
+      <!-- Award 1 -->
+      <div class="award-card" data-category="academic">
+        <div class="award-badge">Gold</div>
+        <div class="award-image">
+          <img src="./img/award1.jpg" alt="Science Award">
+        </div>
+        <div class="award-content">
+          <h3 class="award-title">National Science Olympiad</h3>
+          <div class="award-meta">
+            <span><i class="fas fa-calendar-alt"></i> March 15, 2023</span>
+            <span><i class="fas fa-users"></i> Team of 5</span>
+          </div>
+          <p class="award-description">
+            First place in the National Science Olympiad with groundbreaking research in renewable energy solutions.
+          </p>
+          <a href="#" class="award-link">Read More</a>
+        </div>
+      </div>
+      
+      <!-- Award 2 -->
+      <div class="award-card" data-category="sports">
+        <div class="award-badge">Silver</div>
+        <div class="award-image">
+          <img src="./img/award2.jpg" alt="Sports Award">
+        </div>
+        <div class="award-content">
+          <h3 class="award-title">State Basketball Champions</h3>
+          <div class="award-meta">
+            <span><i class="fas fa-calendar-alt"></i> February 8, 2023</span>
+            <span><i class="fas fa-users"></i> Team of 12</span>
+          </div>
+          <p class="award-description">
+            Undefeated season culminating in the state championship victory with record-breaking scores.
+          </p>
+          <a href="#" class="award-link">Read More</a>
+        </div>
+      </div>
+      
+      <!-- Add more award cards as needed -->
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 SGGS. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Filter functionality
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Update active button
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        const filter = btn.dataset.filter;
+        const cards = document.querySelectorAll('.award-card');
+        
+        cards.forEach(card => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+    
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
