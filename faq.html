@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SGGS Q&A</title>
+  <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Reuse your navbar from index.html -->
+  <nav class="navbar">
+    <div class="nav-box">
+      <div class="nav-links">
+        <a href="parent.html"><span class="label">Home</span></a>
+        <a href="qna.php"><span class="label">Q&A</span></a>
+        <a href="faq.html"><span class="label">FAQ</span></a>
+        <a href="academics.php"><span class="label">Academics</span></a>
+        <a href="index.html"><span class="label">Log Out</span></a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Q&A Content -->
+  <div class="qna-container">
+    <div class="qna-header">
+      <h1>Frequently Asked Questions</h1>
+      <p>Find answers to common questions about our school, programs, and admissions process.</p>
+    </div>
+    
+    <!-- Search Box -->
+    <div class="search-container">
+      <input type="text" class="search-box" placeholder="Search questions...">
+      <i class="fas fa-search search-icon"></i>
+    </div>
+    
+    <!-- FAQ Items -->
+    <div class="faq-section">
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>What are the school hours?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Our regular school hours are from 7:30 AM to 2:00 PM, Monday through Friday. Some extracurricular activities may extend beyond these hours.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>What is the admission process?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Admission to SGGS requires submission of an application form, previous school records, and an entrance examination. Applications are typically accepted between January and March each year.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>What extracurricular activities are offered?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>We offer a wide range of extracurricular activities including sports (badminton, football, athletics), academic clubs (debate, science, math), arts (music, drama, visual arts), and various student organizations.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Is financial aid available?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Yes, we offer several scholarship and financial aid programs for qualifying students. Please contact our administration office for more information about eligibility and application procedures.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>What safety measures are in place?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Student safety is our top priority. We have security personnel on campus, CCTV surveillance, emergency response protocols, and regular safety drills. All visitors must check in at the main office.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="contact-prompt">
+      <h3>Didn't find what you were looking for?</h3>
+      <p><a href="qna.php">Visit our Q&A page</a></p>
+    </div>
+  </div>
+  
+  <!-- Reuse your footer from index.html -->
+  <div class="footer-wrapper">
+    <!-- Your existing footer code -->
+  </div>
+
+  <script>
+    // FAQ toggle functionality
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const item = question.parentNode;
+        item.classList.toggle('active');
+        
+        // Close other open items
+        document.querySelectorAll('.faq-item').forEach(otherItem => {
+          if (otherItem !== item && otherItem.classList.contains('active')) {
+            otherItem.classList.remove('active');
+          }
+        });
+      });
+    });
+    
+    // Search functionality
+    const searchBox = document.querySelector('.search-box');
+    searchBox.addEventListener('input', () => {
+      const searchTerm = searchBox.value.toLowerCase();
+      document.querySelectorAll('.faq-item').forEach(item => {
+        const question = item.querySelector('.faq-question span').textContent.toLowerCase();
+        const answer = item.querySelector('.faq-answer p').textContent.toLowerCase();
+        
+        if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

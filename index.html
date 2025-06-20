@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <title>SGGSWeb</title>
+  <style>
+    .centered-container {
+      display: flex;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      width: 700px;
+      height: 400px;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <div id="home" class="container">
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-box">
+        <div class="nav-links">
+          <a href="index.html"><span class="label">Home</span></a>
+          <div class="dropdown">
+            <span class="dropdown-toggle"><span class="label">About SGGS</span>
+            <div class="dropdown-menu">
+              <a href="administrators.html">Our Administrators</a>
+              <a href="#core-values">Our Core Values</a>
+              <a href="#mission">Our School Vision and Mission</a>
+            </div>
+          </div>
+          <a href="contact.html"><span class="label">Contact</span></a>
+          <a href="login.html"><span class="label">Log In</span></a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Carousel Section -->
+    <div class="carousel">
+      <img src="./img/logo.png" alt="Logo" class="carousel-logo" />
+      <div class="slide active" data-theme="dark">
+        <div class="gradient-overlay"></div>
+        <img src="./img/main.jpg" class="background-image" />
+        <img src="./img/awill.png" alt="Slide Logo" class="carousel-overlay-image" />
+      </div>
+      <div class="slide">
+        <div class="gradient-overlay" data-theme="light"></div>
+        <img src="./img/main2.jpg" class="background-image" />
+        <img src="./img/awill.png" alt="Slide Logo" class="carousel-overlay-image" />
+      </div>
+      <div class="slide">
+        <div class="gradient-overlay" data-theme="dark"></div>
+        <img src="./img/main3.jpg" class="background-image" />
+        <img src="./img/awill.png" alt="Slide Logo" class="carousel-overlay-image" />
+      </div>
+      <div class="slide">
+        <div class="gradient-overlay" data-theme="dark"></div>
+        <img src="./img/main4.jpg" class="background-image" />
+        <img src="./img/awill.png" alt="Slide Logo" class="carousel-overlay-image" />
+      </div>
+    </div>
+
+    <!-- Main Content -->
+      <div class="main-content">
+        <!-- Core Values Header -->
+        <div id="core-values" class="core-values-header">
+          <div class="our-box">Our</div>
+          <span class="core-values-text">Core Values</span>
+        </div>
+
+        <!-- Table Style Section -->
+        <section class="values-container">
+          <div class="centered-container">
+            <div class="selector-panel">
+              <button class="selector" onclick="setContent('Integrity')">Integrity</button>
+              <button class="selector" onclick="setContent('Compassion')">Compassion</button>
+              <button class="selector" onclick="setContent('Respect')">Respect</button>
+              <button class="selector" onclick="setContent('Responsibility')">Responsibility</button>
+            </div>
+            <div class="content-area" id="content-display">
+              Click a Core Value to see its description.
+            </div>
+        </div>
+        </section>
+      </div>
+
+      <!-- Spilt Section -->
+      <div id="mission" class="full-width-section">
+        <div class="dual-columns">
+          <!-- First Panel (matches your example) -->
+          <div class="info-panel">
+            <div class="section-header">
+              <h2>KPM's and Our Mission</h2>
+              <div class="title-divider"></div>
+            </div>
+            <p>Melestarikan sistem pendidikan yang berkualiti untuk membangunkan potensi individu bagi memenuhi aspirasi negara</p>
+          </div>
+
+          <!-- Second Panel (new matching style) -->
+          <div class="info-panel">
+            <div class="section-header">
+              <h2>KPM's and Our Vision</h2>
+              <div class="title-divider"></div>
+            </div>
+            <p>Pendidikan Berkualiti Insan Terdidik Negara Sejahtera</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+    <!-- Floating top section -->
+    <div class="footer-top">
+      <div class="counter-section">
+        <div class="counter" id="yearsCounter">140</div>
+        <div class="counter-label">Years Established</div>
+      </div>
+      <div class="motto-section">
+        <h3>Aut Viam Inveniam Aut Faciam</h3>
+        <p>If There's a Will, There's Always a Way</p>
+      </div>
+    </div>
+    
+    <!-- Main footer -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-columns">
+          <div class="footer-col">
+            <h4>About SGGS</h4>
+            <p>St. George's Girls' School has been a renowned school for many decades and we must hold on to the legacy. Our school with over 600 students per year on average strives to uphold the good name of our school and to produce prestigious students and leaders. Not only that, SGGS has proved to many that students are actively participating in Co-curricular activities as well as performing in academics.</p>
+          </div>
+          
+          <div class="footer-col">
+            <h4>Menu</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="administrators.html">Our Administrators</a></li>
+              <li><a href="#core-values">Our Core Values</a></li>
+              <li><a href="#mission">Our School Vision and Mission</a></li>
+              <li><a href="contact.html">Contact</span></a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-col">
+            <h4>Contacts</h4>
+            <ul>
+              <li><i class="fas fa-map-marker-alt"></i>Jalan Macalister, 10450 George Town, Pulau Pinang, Malaysia.</p></li>
+              <li><i class="fas fa-phone"></i> +605-776 1400</li>
+              <li><i class="fas fa-envelope"></i> email@sggs.edu.my</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="copyright">
+          © St. George's Girls School (SGGS). All Copyrights Reserved.
+        </div>
+      </div>
+    </footer>
+  </div>
+<script src="index.js"></script>
+</body>
+</html>

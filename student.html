@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="student.css" />
+  <title>SGGS Students</title>
+  <style>
+    html, body {
+    overflow: hidden;  /* Disables scrolling */
+    height: 100%;     /* Needed for overflow to work */
+    margin: 0;
+    padding: 0;
+  }
+
+  /* ========== Navbar Styles ========== */
+        .nav-box {
+            background-color: white;
+  padding: 10px 20px;
+  height: 60px;
+  display: inline-flex;
+  align-items: center;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 20px;
+            left: 0;
+            right: 0;
+            height: 80px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            z-index: 1000;
+            background-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-left: auto;
+        }
+
+        .navbar a,
+        .navbar .dropdown-toggle {
+            padding: 2px 16px;
+            color: #B10023;
+            text-decoration: none;
+            font-size: 16px;
+            font-family: "Gabarito", sans-serif;
+            border-radius: 10px;
+            white-space: nowrap;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            display: inline-block;
+        }
+
+  </style>
+</head>
+<body>
+  <div id="home" class="container">
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-box">
+        <div class="nav-links">
+            <a href="#home"><span class="label">Home</span></a>
+            <a href="bulletin.php"><span class="label">Bulletin</span></a>
+            <a href="events.php"><span class="label">Events</span></a>
+            <a href="awards.php"><span class="label">Awards</span></a>
+            <a href="index.html"><span class="label">Log Out</span></a>
+        </div>
+      </div>
+    </nav>
+
+    <img class="fullscreen-image" src="./img/back4.png" alt="full-image">
+    <div class="polaroid-wall">
+      <!-- Polaroid 1 -->
+      <div class="polaroid" style="top: 7%; left: 4%; transform: rotate(-5deg);">
+        <div class="photo-container">
+          <img src="./img/image 1.webp" class="photo">
+        </div>
+      </div>
+
+      <!-- Polaroid 2 -->
+      <div class="polaroid" style="top: 55%; left: 4%; transform: rotate(3deg);">
+        <div class="photo-container">
+          <img src="./img/image 2.webp" class="photo">
+        </div>
+      </div>
+
+      <!-- Polaroid 3 -->
+      <div class="polaroid" style="top: 7%; left: 26%; transform: rotate(4deg);">
+        <div class="photo-container">
+          <img src="./img/image 3.webp" class="photo">
+        </div>
+      </div>
+
+      <!-- Polaroid 4 -->
+      <div class="polaroid" style="top: 55%; left: 25%; transform: rotate(-7deg);">
+        <div class="photo-container">
+          <img src="./img/image 4.webp" class="photo">
+        </div>
+      </div>
+
+      <!-- Polaroid 5 -->
+      <div class="polaroid" style="top: 7%; left: 46%; transform: rotate(-3deg);">
+        <div class="photo-container">
+          <img src="./img/image 5.webp" class="photo">
+        </div>
+      </div>
+
+      <!-- Polaroid 4 -->
+      <div class="polaroid" style="top: 55%; left: 46%; transform: rotate(7deg);">
+        <div class="photo-container">
+          <img src="./img/image 6.webp" class="photo">
+        </div>
+      </div>
+</div>
+    
+
+    
+<script src="student.js"></script>
+</body>
+</html>
